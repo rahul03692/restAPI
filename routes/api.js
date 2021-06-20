@@ -5,7 +5,7 @@ const router = express.Router();
 
 //get
 router.get("/", function (req, res, next) {
-    db.find({}).then((data)=>{
+  db.find({}).then((data)=>{
         res.send(data);
     });
 });

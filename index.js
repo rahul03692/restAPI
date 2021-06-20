@@ -19,6 +19,10 @@ app.use(function(err,req,res,next){
 });
 
 
+app.get('/',()=>{
+    res.send("go to /api to see data");
+})
+
 app.listen(process.env.PORT || 5000,function(){
     console.log("server is running on 5000");
 });
