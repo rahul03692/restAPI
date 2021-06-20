@@ -1,10 +1,12 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const cors=require("cors");
+const dotenv=require("dotenv");
 const mongoose=require("mongoose");
 
-mongoose.connect(config.env.DATABASE, {useNewUrlParser: true});
+dotenv.config({path:"./config.env"});
 
+mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}).then(()=>console.log("DB successful"));
 
 
 const routes=require("./routes/api");
