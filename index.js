@@ -3,7 +3,9 @@ const bodyParser=require("body-parser");
 const cors=require("cors");
 const mongoose=require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/db', {useNewUrlParser: true});
+mongoose.connect(config.env.DATABASE, {useNewUrlParser: true});
+
+
 
 const routes=require("./routes/api");
 const { response } = require("express");
