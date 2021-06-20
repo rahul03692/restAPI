@@ -17,7 +17,7 @@ app.enable("trust proxy");
 app.use(express.json());
 app.use("/api", routes);
 
-app.get("/", () => {
+app.get("/", (req,res) => {
   res.send("go to /api to see data");
 });
 
