@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api", routes);
 
 app.get("/", (req,res) => {
-  res.send("go to /api to see data");
+  res.send('<a href="/api">go to /api to see data</a>');
 });
 
 app.use(function (err, req, res, next) {
